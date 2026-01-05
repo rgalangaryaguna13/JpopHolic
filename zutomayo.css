@@ -1,0 +1,282 @@
+/* ===============================
+   RESET
+=============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===============================
+   BODY (ANTI BLANK)
+=============================== */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f7fb;
+    color: #333;
+    line-height: 1.7;
+
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.4s ease, transform 0.45s ease;
+}
+
+/* PAGE TRANSITION */
+body.fade-out {
+    opacity: 0;
+}
+
+body.slide-left {
+    transform: translateX(-100%);
+}
+
+body.slide-right {
+    transform: translateX(100%);
+}
+
+/* ===============================
+   HEADER
+=============================== */
+#header {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    text-align: center;
+    padding: 40px 20px 30px;
+    position: relative;
+}
+
+/* JAM */
+#jam {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    backdrop-filter: blur(6px);
+}
+
+/* ===============================
+   NAV ATAS
+=============================== */
+nav {
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    background: #1e293b;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    transform: translateY(-3px);
+}
+
+/* ===============================
+   CONTENT
+=============================== */
+#content {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* ===============================
+   PROFIL
+=============================== */
+.artist-profile {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+}
+
+.artist-profile img {
+    width: 260px;
+    border-radius: 16px;
+}
+
+.artist-profile ul {
+    list-style: none;
+}
+
+.artist-profile li {
+    margin-bottom: 10px;
+}
+
+/* ===============================
+   HISTORI & LAGU
+=============================== */
+.artist-history,
+.artist-songs {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+}
+
+.artist-history h2,
+.artist-songs h2 {
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+/* ===============================
+   LIST LAGU
+=============================== */
+.song-list {
+    list-style: none;
+}
+
+.song-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e2e8f0;
+    padding: 14px 18px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.song-list li:hover {
+    background: #c7d2fe;
+    transform: translateX(6px);
+}
+
+.song-title {
+    font-weight: 600;
+}
+
+/* PLAY BUTTON */
+.play-btn {
+    text-decoration: none;
+    background: #0f172a;
+    color: white;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.play-btn:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    transform: scale(1.1);
+}
+
+/* ===============================
+   SOURCE
+=============================== */
+.artist-source {
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+.artist-source a {
+    color: #0f172a;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.artist-source a:hover {
+    color: #38bdf8;
+}
+
+/* ===============================
+   NAV BAWAH (KIRI — KANAN)
+=============================== */
+.nav-page {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+    position: relative;
+}
+
+.nav-btn {
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    background: #1e293b;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.nav-btn:hover {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+/* DIVIDER */
+.nav-divider {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 2px;
+    height: 40px;
+    background: #cbd5f5;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+}
+
+.nav-page:hover .nav-divider {
+    height: 70px;
+    background: #38bdf8;
+}
+
+/* ===============================
+   FOOTER
+=============================== */
+#footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+@media (max-width: 768px) {
+    .artist-profile {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .song-list li {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-divider {
+        display: none;
+    }
+}

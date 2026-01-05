@@ -1,0 +1,184 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f7fb;
+    color: #333;
+    line-height: 1.7;
+    transition: opacity 0.4s ease, transform 0.45s ease;
+}
+
+/* TRANSISI */
+body.fade-out { opacity: 0; }
+body.slide-left { transform: translateX(-100%); }
+body.slide-right { transform: translateX(100%); }
+
+/* HEADER */
+#header {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    text-align: center;
+    padding: 40px 20px 30px;
+    position: relative;
+}
+
+/* JAM */
+#jam {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: rgba(0,0,0,0.45);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* NAV */
+nav {
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    background: #1e293b;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    background: #334155;
+}
+
+/* CONTENT */
+#content {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* CONTACT BOX */
+.contact-box {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.contact-box h2 {
+    margin-bottom: 20px;
+    color: #0f172a;
+}
+
+/* FORM */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    font-family: inherit;
+}
+
+button {
+    margin-top: 10px;
+    width: 100%;
+    background: #1e293b;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #334155;
+}
+
+.note {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+/* EXTRA LINK */
+.contact-divider {
+    margin: 25px 0;
+    height: 1px;
+    background: #e2e8f0;
+    border: none;
+}
+
+.contact-extra {
+    text-align: center;
+}
+
+.contact-link {
+    display: inline-block;
+    background: #1e293b;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-link:hover {
+    background: #334155;
+    transform: translateY(-2px);
+}
+
+/* NAV BAWAH */
+.nav-page {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.nav-btn {
+    text-decoration: none;
+    background: #1e293b;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: #334155;
+}
+
+/* FOOTER */
+#footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+}

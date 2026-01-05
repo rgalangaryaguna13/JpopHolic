@@ -1,0 +1,241 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #333;
+    line-height: 1.7;
+
+    /* fade effect */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+/* ===== HEADER ===== */
+#header {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    text-align: center;
+    padding: 40px 20px 30px;
+    position: relative;
+}
+
+/* ===== JAM (FIX KONTRAS) ===== */
+#jam {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    background: rgba(0, 0, 0, 0.45);
+    color: #ffffff; /* PUTIH */
+
+    padding: 8px 16px;
+    border-radius: 20px;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* bayangan netral */
+}
+
+
+/* ===== NAV ===== */
+nav {
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    background: #1e293b;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    background: #38bdf8;
+    color: #0f172a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(56, 189, 248, 0.5);
+}
+
+/* ===== CONTENT ===== */
+#content {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* ===== PROFIL ===== */
+.artist-profile {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+}
+
+.artist-profile img {
+    width: 260px;
+    border-radius: 16px;
+}
+
+.artist-profile ul {
+    list-style: none;
+}
+
+.artist-profile li {
+    margin-bottom: 10px;
+}
+
+/* ===== HISTORI ===== */
+.artist-history,
+.artist-songs {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+}
+
+.artist-history h2,
+.artist-songs h2 {
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+/* ===== LAGU ===== */
+.song-list {
+    list-style: none;
+}
+
+.song-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e2e8f0;
+    padding: 14px 18px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.song-list li:hover {
+    background: #c7d2fe;
+    transform: translateX(6px);
+}
+
+.song-title {
+    font-weight: 600;
+}
+
+/* ===== BUTTON ===== */
+.play-btn {
+    text-decoration: none;
+    background: #0f172a;
+    color: white;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.play-btn:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    transform: scale(1.1);
+}
+
+/* ===== SOURCE ===== */
+.artist-source {
+    margin-top: 15px;
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+.artist-source a {
+    color: #0f172a;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.artist-source a:hover {
+    color: #38bdf8;
+    text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+#footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    #jam {
+        top: 10px;
+        right: 12px;
+        font-size: 0.8rem;
+    }
+
+    .artist-profile {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .song-list li {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.nav-page {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.nav-page a {
+    text-decoration: none;
+    background: #1e293b;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-page a:hover {
+    background: #38bdf8;
+    color: #0f172a;
+}
